@@ -11,4 +11,8 @@ struct K {
     struct CellId {
         static let todoListItemCellId: String = "ToDoItemCell"
     }
+    
+    struct UserDefaultsKey {
+        static let todoListArray:String = "TodoListArray"
+    }
 }
