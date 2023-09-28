@@ -10,13 +10,14 @@ import UIKit
 class TodoListViewController: UITableViewController {
     //MARK: - Properties
     let itemArray:[String] = ["Find Mike", "Buy Egg", "Travel"]
-
+   
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 
-    //MARK: - TableViewDataSource Methods
+    //MARK: - TableView DataSource Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemArray.count
     }
@@ -27,6 +28,22 @@ class TodoListViewController: UITableViewController {
         cell.textLabel?.text = item
         return cell
     }
+    
+    //MARK: - TableView Delagate Methods
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //let item = itemArray[indexPath.row]
+        
+        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
+            tableView.cellForRow(at: indexPath)?.accessoryType = .none
+        }else{
+            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        }
+        
+        
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 
 }
 
