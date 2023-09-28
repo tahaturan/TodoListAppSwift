@@ -30,7 +30,13 @@
                             <outlet property="delegate" destination="3wD-Qa-Dia" id="la9-Zn-edL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TodoApp" id="PS7-iz-iyw"/>
+                    <navigationItem key="navigationItem" title="TodoApp" id="PS7-iz-iyw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uGE-Mc-MdQ">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="3wD-Qa-Dia" id="bgz-nb-Vta"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKa-EB-wTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
