@@ -5,8 +5,8 @@
 //  Created by Taha Turan on 25.09.2023.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
 class TodoListViewController: UITableViewController {
     // MARK: - Properties
@@ -19,9 +19,8 @@ class TodoListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
 
-//        loadItems()
+        loadItems()
     }
 
     // MARK: - TableView DataSource Methods
@@ -58,7 +57,6 @@ class TodoListViewController: UITableViewController {
 
         let action = UIAlertAction(title: "Add Item", style: .default) { _ in
             if let text = textField.text {
-                   
                 let newItem = Item(context: self.context)
                 newItem.title = text
                 newItem.done = false
@@ -81,8 +79,6 @@ class TodoListViewController: UITableViewController {
     // MARK: - Model Manuplation Methods
 
     func saveItems() {
-       
-
         do {
             try context.save()
         } catch {
@@ -91,17 +87,13 @@ class TodoListViewController: UITableViewController {
 
         tableView.reloadData()
     }
-    
-//    func loadItems()  {
-//        if let dataFilePath = dataFilePath {
-//            if let data = try? Data(contentsOf: dataFilePath) {
-//                let decoder = PropertyListDecoder()
-//                do {
-//                    itemArray = try decoder.decode([Item].self, from: data)
-//                } catch  {
-//                    print("decoder Error, \(error)")
-//                }
-//            }
-//        }
-//    }
+
+    func loadItems() {
+        let request: NSFetchRequest<Item> = Item.fetchRequest()
+        do {
+            itemArray = try context.fetch(request)
+        } catch {
+            print("Error fetching data from context, \(error)")
+        }
+    }
 }
