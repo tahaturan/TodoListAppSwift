@@ -17,7 +17,7 @@ class CategoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadItems()
+        loadCategories()
 
     }
 
@@ -39,7 +39,16 @@ class CategoryTableViewController: UITableViewController {
     // MARK: - TableView Delagate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: K.NavgigationId.categoryToItems, sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! TodoListViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.selectedCategory = categoryItems[indexPath.row]
+        }
     }
 
  
@@ -55,7 +64,7 @@ class CategoryTableViewController: UITableViewController {
                 let categoryItem = Category(context: self.contex)
                 categoryItem.name = text
                 self.categoryItems.append(categoryItem)
-                self.saveItems()
+                self.saveCategories()
                 
             }
         }
@@ -69,9 +78,9 @@ class CategoryTableViewController: UITableViewController {
         
     }
     
-    // MARK: - Model Manuplation Methods
+    // MARK: - Data Manuplation Methods
     
-    func saveItems() {
+    func saveCategories() {
         do {
             try contex.save()
         } catch  {
@@ -80,7 +89,7 @@ class CategoryTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    func loadItems(request: NSFetchRequest<Category> = Category.fetchRequest())  {
+    func loadCategories(request: NSFetchRequest<Category> = Category.fetchRequest())  {
         do {
            categoryItems = try contex.fetch(request)
         } catch  {
