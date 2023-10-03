@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F8532992AC69392001BBA67 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F8532972AC69392001BBA67 /* DataModel.xcdatamodeld */; };
+		5F85329B2ACA852F001BBA67 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F85329A2ACA852F001BBA67 /* CategoryTableViewController.swift */; };
 		5FE4F2A82AC1E8C20011A869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4F2A72AC1E8C20011A869 /* AppDelegate.swift */; };
 		5FE4F2AA2AC1E8C20011A869 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4F2A92AC1E8C20011A869 /* SceneDelegate.swift */; };
 		5FE4F2AC2AC1E8C20011A869 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4F2AB2AC1E8C20011A869 /* TodoListViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		5F8532982AC69392001BBA67 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		5F85329A2ACA852F001BBA67 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		5FE4F2A42AC1E8C20011A869 /* TodoListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE4F2A72AC1E8C20011A869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FE4F2A92AC1E8C20011A869 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				5FE4F2AB2AC1E8C20011A869 /* TodoListViewController.swift */,
+				5F85329A2ACA852F001BBA67 /* CategoryTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				5F8532992AC69392001BBA67 /* DataModel.xcdatamodeld in Sources */,
 				5FE4F2AA2AC1E8C20011A869 /* SceneDelegate.swift in Sources */,
 				5FE4F2BD2AC1EAEE0011A869 /* AppConstants.swift in Sources */,
+				5F85329B2ACA852F001BBA67 /* CategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
