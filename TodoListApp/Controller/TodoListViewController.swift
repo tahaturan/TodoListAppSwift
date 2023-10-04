@@ -14,7 +14,7 @@ class TodoListViewController: UITableViewController {
     var itemArray: [Item] = []
     var selectedCategory: Category? {
         didSet {
-            loadItems()
+          //  loadItems()
         }
     }
 
@@ -61,15 +61,15 @@ class TodoListViewController: UITableViewController {
         let alert = UIAlertController(title: "Add New Todo Item", message: "", preferredStyle: .alert)
 
         let action = UIAlertAction(title: "Add Item", style: .default) { _ in
-            if let text = textField.text, let selectedCategory = self.selectedCategory {
-                let newItem = Item(context: self.context)
-                newItem.title = text
-                newItem.done = false
-                newItem.parentCategory = selectedCategory
-                self.itemArray.append(newItem)
-
-                self.saveItems()
-            }
+//            if let text = textField.text, let selectedCategory = self.selectedCategory {
+//                let newItem = Item(context: self.context)
+//                newItem.title = text
+//                newItem.done = false
+//                newItem.parentCategory = selectedCategory
+//                self.itemArray.append(newItem)
+//
+//                self.saveItems()
+//            }
         }
 
         alert.addTextField { alertTextField in
@@ -94,23 +94,23 @@ class TodoListViewController: UITableViewController {
         tableView.reloadData()
     }
 
-    func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest(), predicate: NSPredicate? = nil) {
-    
-        let categoryPredicate = NSPredicate(format: "parentCategory.name MATCHES %@", selectedCategory!.name!)
-        
-        if let addtionalPredicate = predicate {
-            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categoryPredicate, addtionalPredicate])
-        }else{
-            request.predicate = categoryPredicate
-        }
-        
-        do {
-            itemArray = try context.fetch(request)
-        } catch {
-            print("Error fetching data from context, \(error)")
-        }
-        tableView.reloadData()
-    }
+//    func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest(), predicate: NSPredicate? = nil) {
+//
+//        let categoryPredicate = NSPredicate(format: "parentCategory.name MATCHES %@", selectedCategory!.name!)
+//
+//        if let addtionalPredicate = predicate {
+//            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categoryPredicate, addtionalPredicate])
+//        }else{
+//            request.predicate = categoryPredicate
+//        }
+//
+//        do {
+//            itemArray = try context.fetch(request)
+//        } catch {
+//            print("Error fetching data from context, \(error)")
+//        }
+//        tableView.reloadData()
+//    }
 }
 
 //MARK: - Search Bar Methods
@@ -120,22 +120,22 @@ extension TodoListViewController: UISearchBarDelegate {
 
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let request: NSFetchRequest<Item> = Item.fetchRequest()
-
-        
-        if searchText == "" {
-            loadItems()
-            DispatchQueue.main.async {
-                searchBar.resignFirstResponder()
-            }
-        }else{
-            
-            let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchText)
-            
-            request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
-            
-            loadItems(with: request, predicate: predicate)
-        }
+//        let request: NSFetchRequest<Item> = Item.fetchRequest()
+//
+//
+//        if searchText == "" {
+//            loadItems()
+//            DispatchQueue.main.async {
+//                searchBar.resignFirstResponder()
+//            }
+//        }else{
+//
+//            let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchText)
+//
+//            request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+//
+//            loadItems(with: request, predicate: predicate)
+//        }
         
     }
 }
