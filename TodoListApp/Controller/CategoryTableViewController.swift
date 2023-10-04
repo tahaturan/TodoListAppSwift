@@ -32,7 +32,7 @@ class CategoryTableViewController: UITableViewController {
          
        
             
-        cell.textLabel?.text = categoryItems?[indexPath.row].name ?? "nil"
+        cell.textLabel?.text = categoryItems?[indexPath.row].name ?? "No categories Added"
         
         
         
