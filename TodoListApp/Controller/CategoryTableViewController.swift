@@ -16,7 +16,7 @@ class CategoryTableViewController: UITableViewController {
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       // print(Realm.Configuration.defaultConfiguration.fileURL)
         loadCategories()
 
     }
