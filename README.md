@@ -17,7 +17,7 @@ Bu projede aşağıdaki konuları öğrendim ve deneyimledim:
 1. **Depoyu Klonlayın**: Projeyi bilgisayarınıza klonlayın.
 
     ```bash
-    git clone https://github.com/tahaturan/todoapp-realm-coredata.git
+    git clone https://github.com/tahaturan/TodoListAppSwift.git
     ```
 
 
