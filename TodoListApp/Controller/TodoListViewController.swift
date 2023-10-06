@@ -36,7 +36,10 @@ class TodoListViewController: SwipeTableViewController {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         if let item = todoItems?[indexPath.row] {
             cell.textLabel?.text = item.title
+            cell.backgroundColor = item.done ?  K.Colors.nileStone : K.Colors.darkDenimBlue.withAlphaComponent(0.7)
             cell.accessoryType = item.done ? .checkmark : .none
+            
+            
         }
 
         return cell

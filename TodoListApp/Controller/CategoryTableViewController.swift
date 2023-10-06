@@ -20,7 +20,8 @@ class CategoryTableViewController: SwipeTableViewController {
         super.viewDidLoad()
         // print(Realm.Configuration.defaultConfiguration.fileURL)
         loadCategories()
-       
+        
+
     }
 
     // MARK: - Table view data source
@@ -33,7 +34,9 @@ class CategoryTableViewController: SwipeTableViewController {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
 
         cell.textLabel?.text = categoryItems?[indexPath.row].name ?? "No categories Added yet"
-
+        cell.backgroundColor = indexPath.row % 2 == 0 ? K.Colors.nileStone : K.Colors.darkDenimBlue.withAlphaComponent(0.7)
+       
+        
         return cell
     }
 

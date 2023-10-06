@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5F5537C82ACE5257001C5768 /* SwipeCellKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F5537C72ACE5257001C5768 /* SwipeCellKit */; };
 		5F5537CA2ACE87C4001C5768 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5537C92ACE87C4001C5768 /* SwipeTableViewController.swift */; };
+		5F5537CC2ACFB015001C5768 /* AppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5537CB2ACFB015001C5768 /* AppExtension.swift */; };
 		5F85329B2ACA852F001BBA67 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F85329A2ACA852F001BBA67 /* CategoryTableViewController.swift */; };
 		5FAA66CE2ACBD47F00A956B3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5FAA66CD2ACBD47F00A956B3 /* Realm */; };
 		5FAA66D02ACBD47F00A956B3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5FAA66CF2ACBD47F00A956B3 /* RealmSwift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		5F5537C92ACE87C4001C5768 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
+		5F5537CB2ACFB015001C5768 /* AppExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
 		5F85329A2ACA852F001BBA67 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		5FAA66D32ACBE96A00A956B3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		5FAA66D52ACBE97500A956B3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				5FE4F2BC2AC1EAEE0011A869 /* AppConstants.swift */,
+				5F5537CB2ACFB015001C5768 /* AppExtension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F5537CC2ACFB015001C5768 /* AppExtension.swift in Sources */,
 				5F5537CA2ACE87C4001C5768 /* SwipeTableViewController.swift in Sources */,
 				5FE4F2AC2AC1E8C20011A869 /* TodoListViewController.swift in Sources */,
 				5FE4F2A82AC1E8C20011A869 /* AppDelegate.swift in Sources */,
