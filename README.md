@@ -28,7 +28,7 @@ Uygulamanın nasıl kullanılacağına dair açıklamalar ve uygulama görseller
 
 | Ekran Görüntüsü 1 | Ekran Görüntüsü 2 | Ekran Görüntüsü 3 |
 |-----------------|-----------------|-----------------|
-|   ![Ekran Görüntüsü 1](images/5.png) | ![Ekran Görüntüsü 2](images/2.png) | ![Ekran Görüntüsü 3](images/3.png) |
+  <img src="Images/5.png"> | <img src="Images/2.png">  | <img src="Images/3.png">  |
 
-![Uygulama Gif'i](images/4.gif)
+<img src="Images/4.gif"> 
 
