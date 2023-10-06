@@ -9,8 +9,8 @@ import Foundation
 
 struct K {
     struct CellId {
-        static let todoListItemCellId: String = "ToDoItemCell"
-        static let categoryCell: String = "CategoryCell"
+        static let todoListItemCellId: String = "Cell"
+       
     }
     
     struct UserDefaultsKey {
